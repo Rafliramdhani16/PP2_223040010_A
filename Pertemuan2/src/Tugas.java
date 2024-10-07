@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.Hashtable;
 
 public class Tugas extends JFrame {
 
@@ -17,7 +18,7 @@ public class Tugas extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(600, 600);
         this.setLayout(new BorderLayout());
-        this.setTitle("Enhanced Aplikasi Input Data");
+        this.setTitle("Formulir Input Data");
 
         createMenu();
 
@@ -94,10 +95,19 @@ public class Tugas extends JFrame {
         ageSlider.setMinorTickSpacing(5);
         ageSlider.setPaintTicks(true);
         ageSlider.setPaintLabels(true);
+
+        // Membuat label untuk slider
+        Hashtable<Integer, JLabel> labelTable = new Hashtable<>();
+        for (int i = 0; i <= 100; i += 20) {
+            labelTable.put(i, new JLabel(String.valueOf(i)));
+        }
+        ageSlider.setLabelTable(labelTable);
+
         panel.add(ageSlider, BorderLayout.CENTER);
 
         return panel;
     }
+
 
     private JPanel createPasswordPanel() {
         JPanel panel = new JPanel(new BorderLayout());
