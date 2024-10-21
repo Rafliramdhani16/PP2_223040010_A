@@ -1,0 +1,55 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class DynamicListExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Dynamic List Example");
+
+        // Membuat DefaultListModel
+        DefaultListModel<String> listModel = new DefaultListModel<>();
+        listModel.addElement("Dynamic Item 1");
+        listModel.addElement("Dynamic Item 2");
+        listModel.addElement("Dynamic Item 3");
+
+        // Membuat JList dengan model
+        JList<String> list = new JList<>(listModel);
+        list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
+        // JScrollPane untuk JList
+        JScrollPane scrollPane = new JScrollPane(list);
+
+        // Tombol untuk menambahkan item baru
+        JButton addButton = new JButton("Add Item");
+        addButton.setBounds(50, 180, 100, 30);
+        addButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                listModel.addElement("New Item");
+            }
+        });
+
+        // Tombol untuk menghapus item yang dipilih
+        JButton removeButton = new JButton("Remove Item");
+        removeButton.setBounds(160, 180, 120, 30);
+        removeButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int selectedIndex = list.getSelectedIndex();
+                if (selectedIndex != -1) {
+                    listModel.remove(selectedIndex);
+                }
+            }
+        });
+
+        // Mengatur layout dan menambahkan komponen ke frame
+        frame.setLayout(null);
+        scrollPane.setBounds(50, 50, 150, 100);
+        frame.add(scrollPane);
+        frame.add(addButton);
+        frame.add(removeButton);
+
+        // Konfigurasi frame
+        frame.setSize(350, 250);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
