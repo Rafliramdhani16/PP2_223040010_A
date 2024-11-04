@@ -1,4 +1,6 @@
-package Membership.src.view;
+package Membership.src.view.main;
+
+import Membership.src.view.main.MainFrame;
 
 import java.awt.event.*;
 

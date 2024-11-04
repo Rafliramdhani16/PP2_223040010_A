@@ -1,14 +1,13 @@
-package Membership.src.view;
+package Membership.src.view.jenismember;
 
-import javax.swing.table.AbstractTableModel;
+import javax.swing.table.*;
 import java.util.List;
-import Membership.src.model.Member;
+import Membership.src.model.JenisMember;
+public class JenisMemberTableModel extends AbstractTableModel {
+    private String[] columnNames = {"Nama"};
+    private List<JenisMember> data;
 
-class MemberTableModel extends AbstractTableModel {
-    private String[] columnNames = {"Nama", "Jenis Member"};
-    private List<Member> data;
-
-    public MemberTableModel(List<Member> data) {
+    public JenisMemberTableModel(List<JenisMember> data) {
         this.data = data;
     }
 
@@ -29,14 +28,11 @@ class MemberTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int row, int col) {
-        Member rowItem = data.get(row);
+        JenisMember rowItem = data.get(row);
         String value = "";
         switch (col) {
             case 0:
                 value = rowItem.getNama();
-                break;
-            case 1:
-                value = rowItem.getJenisMember().getNama();
                 break;
         }
         return value;
@@ -44,10 +40,10 @@ class MemberTableModel extends AbstractTableModel {
 
     @Override
     public boolean isCellEditable(int row, int col) {
-        return false; // This table does not allow cell editing.
+        return false; // This makes the cell not editable
     }
 
-    public void add(Member value) {
+    public void add(JenisMember value) {
         data.add(value);
         fireTableRowsInserted(data.size() - 1, data.size() - 1);
     }

@@ -1,13 +1,12 @@
-package Membership.src.view;
+package Membership.src.view.main;
 
 import java.awt.FlowLayout;
-import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.table.*;
-import java.util.*;
-import Membership.src.view.jenismember.JenisMemberFrame;
-import Membership.src.dao.*;
+
 import Membership.src.view.member.MemberFrame;
+import Membership.src.view.member.jenismember.JenisMemberFrame;
+import Membership.src.dao.*;
+
 public class MainFrame extends JFrame {
     private JenisMemberFrame jenisMemberFrame;
     private MemberFrame memberFrame;

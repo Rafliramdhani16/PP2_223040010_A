@@ -1,11 +1,11 @@
-package Membership.src.view;
+package Membership.src.view.jenismember;
 
-import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.table.*;
 import java.util.*;
 import Membership.src.model.JenisMember;
 import Membership.src.dao.JenisMemberDao;
+import JenisMemberButtonSimpanActionListener;
+import JenisMemberTableModel;
 
 public class JenisMemberFrame extends JFrame {
     private List<JenisMember> jenisMemberList;

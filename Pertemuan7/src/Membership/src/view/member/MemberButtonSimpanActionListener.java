@@ -1,4 +1,4 @@
-package Membership.src.view;
+package Membership.src.view.member;
 
 import java.awt.event.*;
 import java.util.UUID;
