@@ -75,7 +75,7 @@ public class MainFrame extends JFrame {
         memberFrame.populateComboJenis();
         memberFrame.refreshTable();
         memberFrame.setVisible(true);
-    }  
+    }
 
     public static void main(String[] args) {
         try {
