@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="asm-7.1">
+  <library name="openpdf-2.0.3">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/libs/asm-7.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/openpdf-2.0.3.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

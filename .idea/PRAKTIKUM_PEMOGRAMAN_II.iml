@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="asm-7.11" level="project" />
+    <orderEntry type="library" name="openpdf-2.0.3" level="project" />
+    <orderEntry type="library" name="asm-7.12" level="project" />
   </component>
 </module>
